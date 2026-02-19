@@ -6,6 +6,7 @@ import { LanguageToggle } from "./LanguageToggle";
 import { useLanguage } from "../utils/LanguageContext";
 import { cn } from "../utils/helpers";
 import { FaCode } from "react-icons/fa6";
+import logo from "../public/logo.png";
 
 
 
@@ -50,8 +51,9 @@ export const Navbar = ({ theme, setTheme }) => {
             whileHover={{ scale: 1.05 }}
             className="text-2xl font-bold bg-linear-to-r from-primary to-blue-600 bg-clip-text text-transparent"
           > 
-          <div className="flex items-center gap-3">
-              Caspian Div <FaCode size={30} className="text-2xl text-[#2463eb] mt-1" />
+          <div className="flex items-center gap-3 mt-5">
+            
+               <img src={`${logo}`} className="rounded-full h-10" alt="image" /> Caspian Div <FaCode size={30} className="text-2xl text-[#2463eb] mt-1" />
           </div>
           </motion.a>
 
