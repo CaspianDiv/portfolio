@@ -24,9 +24,10 @@ export const ThemeToggle = ({ theme, setTheme }) => {
         transition={{ duration: 0.3 }}
       >
         {theme === "dark" ? (
-          <Moon className="h-5 w-5 text-primary" />
-        ) : (
           <Sun className="h-5 w-5 text-primary" />
+         
+        ) : (
+           <Moon className="h-5 w-5 text-primary" />
         )}
       </motion.div>
     </motion.button>
