@@ -81,7 +81,7 @@ export const Navbar = ({ theme, setTheme }) => {
           {/* Mobile menu button */}
           <div className="md:hidden flex items-center gap-2">
             <LanguageToggle />
-            <ThemeToggle theme={theme} setTheme={setTheme} />
+            <ThemeToggle className="cursor-pointer" theme={theme} setTheme={setTheme} />
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
