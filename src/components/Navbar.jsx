@@ -74,7 +74,7 @@ export const Navbar = ({ theme, setTheme }) => {
             ))}
             <div className="ml-4 flex items-center gap-2">
               <LanguageToggle />
-              <ThemeToggle theme={theme} setTheme={setTheme} />
+              <ThemeToggle className="cursor-pointer" theme={theme} setTheme={setTheme} />
             </div>
           </div>
 
