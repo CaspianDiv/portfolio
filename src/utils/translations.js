@@ -23,7 +23,7 @@ export const translations = {
       features: [
         {
           title: "Front-End Developer",
-          description: "2025-cü il Oktyabrında Front-End Developer üzrə birinci dərəcəli diplom sertifikatı aldım",
+          description: "2025-cü il Sentyabr Front-End Developer üzrə birinci dərəcəli diplom sertifikatı aldım",
         },
         {
           title: "Full Stack Təhsil",
@@ -31,7 +31,7 @@ export const translations = {
         },
         {
           title: "Back-End Journey",
-          description: "2026-ci ilin may ayından Node.js üzrə Back-End dərslərim başlayacağam",
+          description: "2026-ci ilin may ayından Node.js üzrə Back-End dərslərim başlayacağ",
         },
       ],
       description: "Web development sahəsində öz kariyeramı qurmaq üçün əlimdən gələni edirəm. Front-End üzrə möhkəm təməl qurduqdan sonra, indi Full Stack Developer olmaq yolunda irəliləyirəm. Hər gün yeni texnologiyalar öyrənir və praktiki proyektlər üzərində işləyirəm.",
@@ -139,7 +139,7 @@ export const translations = {
       features: [
         {
           title: "Front-End Developer",
-          description: "Received a first-class diploma certificate in Front-End Development in October 2025",
+          description: "Received a first-class diploma certificate in Front-End Development in September 2025",
         },
         {
           title: "Full Stack Education",
@@ -255,7 +255,7 @@ export const translations = {
       features: [
         {
           title: "Front-End Developer",
-          description: "Получил диплом первой степени по Front-End разработке в Октябрь 2024 года",
+          description: "Получил диплом первой степени по Front-End разработке в Сентябрь 2024 года",
         },
         {
           title: "Full Stack обучение",
