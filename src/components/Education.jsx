@@ -5,8 +5,8 @@ import { useLanguage } from "../utils/LanguageContext";
 export const Education = () => {
   const { t } = useLanguage();
 
-  const skills1 = ["React", "JavaScript", "HTML/CSS", "Tailwind CSS", "Git"];
-  const skills2 = ["HTML", "CSS", "JavaScript", "Responsive Design", "UI/UX"];
+  const skills1 = ["React", "JavaScript", "HTML5/CSS3", "Tailwind CSS", "Git" , "Github" , "Node.js" , "Express.js", "Database Fundamentals (No SQL)" , "MongoDB", "MySQL"];
+  const skills2 = ["HTML5", "CSS3", "JavaScript","jQuery" , "AJAX" , "AJAX + Fetch","Responsive Design", "UI/UX"];
 
   const education = [
     {
