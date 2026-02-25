@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Award, Download, ExternalLink, Eye, Trophy, Medal } from "lucide-react";
+import { Award, Download, ExternalLink, Eye, Trophy, Medal, Star } from "lucide-react";
 import { useState } from "react";
 import { HoverCard } from "./HoverCard";
 import { useLanguage } from "../utils/LanguageContext";
 import diplom from "../public/front_end_diplom.jpeg";
 
-// Sertifikat və diplom məlumatları
+
 const achievementsData = [
   {
     id: 1,
@@ -22,12 +22,73 @@ const achievementsData = [
       ru: "Первая степень"
     },
     image: `${diplom}`,
-    certificateUrl: "https://drive.google.com/file/d/1vQ9iE6830bQOmBYj0kkMRgaZ5hsGJ3mc/view?usp=sharing", // Sertifikat PDF linki
+    certificateUrl: "https://drive.google.com/file/d/1vQ9iE6830bQOmBYj0kkMRgaZ5hsGJ3mc/view?usp=sharing",
     icon: Trophy,
     color: "from-yellow-500 to-orange-500",
   },
   {
     id: 2,
+    title: {
+      az: "Karyeraya İlk Addım",
+      en: "Career Foundation Program",
+      ru: "Программа Развития Карьеры"
+    },
+    institution: "DivAcademy",
+    date: "2025",
+    level: {
+      az: "Tamamlandı",
+      en: "Completed",
+      ru: "Завершено"
+    },
+    image: "https://i.ibb.co/tjqrh3M/front-end-sertifikat.jpg", // Öz şəkilinlə əvəz et
+    certificateUrl: "https://drive.google.com/file/d/1vQ9iE6830bQOmBYj0kkMRgaZ5hsGJ3mc/view", // Sertifikat linki buraya
+    icon: Award,
+    color: "from-green-500 to-teal-500",
+  },
+  {
+    id: 3,
+    title: {
+      az: "Backend for Frontend",
+      en: "Career Foundation Program",
+      ru: "Программа Развития Карьеры"
+    },
+    institution: "Xsolla",
+    date: "2026",
+    level: {
+      az: "Tamamlandı",
+      en: "Completed",
+      ru: "Завершено"
+    },
+    image: "https://i.ibb.co/DH5dQZ6W/full-stack-developer-sertifikat.jpg", // Öz şəkilinlə əvəz et
+    certificateUrl: "https://drive.google.com/file/d/1OhwsQk290fpa-89z5jYdTgWr_2VcGGIs/view?usp=drive_link", // Sertifikat linki buraya
+    icon: Award,
+    color: "from-green-500 to-teal-500",
+  },
+  // ========================================
+  // YENİ SERTİFİKAT ƏLAVƏ ETMƏK ÜÇÜN BURAYA KOPYALA-YAPIŞDIR:
+  // ========================================
+  // {
+  //   id: 3,
+  //   title: {
+  //     az: "Sertifikat Adı (Azərbaycan dilində)",
+  //     en: "Certificate Name (English)",
+  //     ru: "Название сертификата (Русский)"
+  //   },
+  //   institution: "Platform/Akademiya adı",
+  //   date: "2025",
+  //   level: {
+  //     az: "Səviyyə (məsələn: İleri, Orta, Başlanğıc)",
+  //     en: "Level (e.g: Advanced, Intermediate, Beginner)",
+  //     ru: "Уровень (например: Продвинутый, Средний, Начальный)"
+  //   },
+  //   image: "/path-to-image.jpg", // Şəkil yolu - public qovluğuna qoy
+  //   certificateUrl: "https://certificate-link.com", // Sertifikat PDF linki
+  //   icon: Star, // İkonlar: Trophy, Medal, Award, Star
+  //   color: "from-purple-500 to-pink-500", // Tailwind gradient rəngləri
+  // },
+  // ========================================
+  {
+    id: 4,
     title: {
       az: "Full Stack Developer (Davam edir)",
       en: "Full Stack Developer (In Progress)",
@@ -40,8 +101,8 @@ const achievementsData = [
       en: "In Progress",
       ru: "В процессе"
     },
-    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80", // Placeholder
-    certificateUrl: null, // Hələ yoxdur
+    image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+    certificateUrl: null,
     icon: Medal,
     color: "from-blue-500 to-purple-500",
     inProgress: true,
@@ -59,8 +120,7 @@ export const Achievements = () => {
   }));
 
   const handleDownloadCV = () => {
-    // CV yükləmə funksiyası - öz CV linkinizlə əvəz edin
-    const cvUrl = "https://drive.google.com/file/d/1VFrKF4K0-sBO0igPceCzy-l_3bMwIQss/view?usp=sharing"; // Bu yolu dəyişdirin
+    const cvUrl = "https://drive.google.com/file/d/1VFrKF4K0-sBO0igPceCzy-l_3bMwIQss/view?usp=sharing";
     window.open(cvUrl, "_blank");
   };
 
@@ -102,18 +162,17 @@ export const Achievements = () => {
           </motion.button>
         </motion.div>
 
-        {/* Achievements Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* Achievements Grid - 3 sütun (lg screen-də) */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {achievements.map((achievement, index) => (
             <HoverCard key={achievement.id} containerClassName="h-full">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="rounded-2xl bg-background border border-border overflow-hidden h-full flex flex-col relative"
               >
-                {/* Progress Badge */}
                 {achievement.inProgress && (
                   <div className="absolute top-4 right-4 z-10">
                     <span className="px-3 py-1 bg-green-500/20 text-green-600 dark:text-green-400 rounded-full text-sm font-medium backdrop-blur-sm">
@@ -124,7 +183,7 @@ export const Achievements = () => {
 
                 {/* Image */}
                 <div 
-                  className="relative group cursor-pointer overflow-hidden h-64"
+                  className="relative group cursor-pointer overflow-hidden h-48"
                   onClick={() => setSelectedImage(achievement.image)}
                 >
                   <motion.img
@@ -136,7 +195,6 @@ export const Achievements = () => {
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
                   
-                  {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <motion.div
                       initial={{ scale: 0 }}
@@ -147,25 +205,25 @@ export const Achievements = () => {
                     </motion.div>
                   </div>
 
-                  {/* Icon Badge */}
-                  <div className={`absolute top-4 left-4 w-16 h-16 bg-linear-to-br ${achievement.color} rounded-2xl flex items-center justify-center shadow-lg`}>
-                    <achievement.icon className="w-8 h-8 text-white" />
+                  <div className={`absolute top-4 left-4 w-12 h-12 bg-linear-to-br ${achievement.color} rounded-xl flex items-center justify-center shadow-lg`}>
+                    <achievement.icon className="w-6 h-6 text-white" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 flex-1 flex flex-col">
-                  <h3 className="text-2xl font-bold mb-2">{achievement.title}</h3>
+                <div className="p-5 flex-1 flex flex-col">
+                  <h3 className="text-xl font-bold mb-2 line-clamp-2">{achievement.title}</h3>
                   
-                  <div className="flex items-center gap-2 text-foreground/60 mb-4">
-                    <Award className="w-4 h-4" />
-                    <span className="font-medium">{achievement.institution}</span>
-                    <span className="mx-2">•</span>
-                    <span>{achievement.date}</span>
+                  <div className="flex flex-col gap-1 text-sm text-foreground/60 mb-3">
+                    <div className="flex items-center gap-2">
+                      <Award className="w-3 h-3" />
+                      <span className="font-medium">{achievement.institution}</span>
+                    </div>
+                    <span className="text-xs">{achievement.date}</span>
                   </div>
 
-                  <div className="mb-4">
-                    <span className={`inline-block px-4 py-2 rounded-full text-sm font-semibold ${
+                  <div className="mb-3">
+                    <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${
                       achievement.inProgress 
                         ? "bg-blue-500/20 text-blue-600 dark:text-blue-400"
                         : "bg-yellow-500/20 text-yellow-600 dark:text-yellow-400"
@@ -175,31 +233,31 @@ export const Achievements = () => {
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="mt-auto pt-4">
+                  <div className="mt-auto pt-3">
                     {achievement.certificateUrl ? (
-                      <div className="flex gap-3">
+                      <div className="flex gap-2">
                         <motion.a
                           href={achievement.certificateUrl}
                           target="_blank"
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-primary text-primary-foreground rounded-lg font-semibold transition-colors"
+                          className="flex-1 flex items-center justify-center gap-2 px-3 py-2 bg-primary text-primary-foreground rounded-lg text-sm font-semibold transition-colors"
                         >
-                          <ExternalLink className="w-4 h-4" />
+                          <ExternalLink className="w-3 h-3" />
                           <span>{t.achievements.viewCertificate}</span>
                         </motion.a>
                         <motion.button
                           onClick={() => setSelectedImage(achievement.image)}
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
-                          className="px-4 py-3 bg-secondary hover:bg-accent border border-border rounded-lg transition-colors"
+                          className="px-3 py-2 bg-secondary hover:bg-accent border border-border rounded-lg transition-colors"
                         >
-                          <Eye className="w-5 h-5" />
+                          <Eye className="w-4 h-4" />
                         </motion.button>
                       </div>
                     ) : (
-                      <div className="text-center py-3 bg-secondary/50 rounded-lg text-foreground/60">
+                      <div className="text-center py-2 bg-secondary/50 rounded-lg text-sm text-foreground/60">
                         {t.achievements.comingSoon}
                       </div>
                     )}
@@ -215,8 +273,8 @@ export const Achievements = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-8 max-w-3xl mx-auto"
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-12 max-w-3xl mx-auto"
         >
           <HoverCard>
             <div className="p-8 rounded-2xl bg-linear-to-br from-primary/10 via-blue-500/10 to-purple-500/10 border-2 border-dashed border-primary/30 text-center">
