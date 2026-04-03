@@ -53,7 +53,7 @@ export const Navbar = ({ theme, setTheme }) => {
           > 
           <div className="flex items-center gap-3 mt-5">
             
-               <img src={`${logo}`} className="rounded-full h-10" alt="image" /> Caspian Div <FaCode size={30} className="text-2xl text-[#2463eb] mt-1" />
+               <img src={`${logo}`} className="rounded-full h-10" alt="image" /> <span className="text-[1rem] lg:text-xl xl:text-xl">Caspian Div</span> <FaCode size={20} className="text-[#2463eb] mt-1" />
           </div>
           </motion.a>
 
