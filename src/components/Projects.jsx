@@ -254,7 +254,7 @@ const projectsData = [
     image: `${project_19}`,
     tags: ["HTML5", "CSS3" , "Tailwind CSS + Vite", "React JS + Vite"],
     github: "https://github.com/CaspianDiv/country_app-React.js-",
-    demo: "https://country-app-react-js.vercel.app/countries",
+    demo: "https://country-app-react-js.vercel.app",
   },
   {
     title: { az: "Apple kalkulyator virtual", en: "Apple virtual calculator", ru: "виртуальный калькулятор Apple" },
