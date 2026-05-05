@@ -31,7 +31,7 @@ export const translations = {
         },
         {
           title: "Back-End Journey",
-          description: "2026-ci ilin may ayından Node.js üzrə Back-End dərslərim başlayacağ",
+          description: "2026-ci ilin İyun ayından Node.js üzrə Back-End dərslərim başlayacağ",
         },
       ],
       description: "Web development sahəsində öz kariyeramı qurmaq üçün əlimdən gələni edirəm. Front-End üzrə möhkəm təməl qurduqdan sonra, indi Full Stack Developer olmaq yolunda irəliləyirəm. Hər gün yeni texnologiyalar öyrənir və praktiki proyektlər üzərində işləyirəm.",
@@ -147,7 +147,7 @@ export const translations = {
         },
         {
           title: "Back-End Journey",
-          description: "Will start Back-End courses in Node.js from May 2026",
+          description: "Will start Back-End courses in Node.js from June 2026",
         },
       ],
       description: "I'm doing my best to build my career in web development. After building a solid foundation in Front-End, I'm now progressing towards becoming a Full Stack Developer. I learn new technologies every day and work on practical projects.",
@@ -263,7 +263,7 @@ export const translations = {
         },
         {
           title: "Back-End путь",
-          description: "С мая 2026 года начну курсы Back-End на Node.js",
+          description: "С Июнь 2026 года начну курсы Back-End на Node.js",
         },
       ],
       description: "Я делаю все возможное, чтобы построить свою карьеру в веб-разработке. После создания прочной основы во Front-End, я теперь продвигаюсь к тому, чтобы стать Full Stack разработчиком. Каждый день изучаю новые технологии и работаю над практическими проектами.",
